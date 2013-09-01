@@ -16,7 +16,8 @@ urlpatterns = patterns('',
 
     # Uncomment the next line to enable the admin:
     # url(r'^admin/', include(admin.site.urls)),
-    (r'^$', TemplateView.as_view(template_name='about.html'))
+    (r'^$', TemplateView.as_view(template_name='about.html')),
+    (r'^test-bootstrap$', TemplateView.as_view(template_name='test-bootstrap.html')),
 )
 
 if settings.DEBUG:
