@@ -19,9 +19,18 @@
             color: #800;
             text-align: center;
         }
-	a, a:visited, a:hover {
+        a, a:visited, a:hover {
             color: white;
-	}
+        }
+        .new {
+            color: #fff;
+        }
+        .new, .old {
+            font-size: 24px;
+        }
+        .old, .old a, .old a:visited, .old a:hover {
+            color: #999;
+        }
     </style>
 </head>
 <body>
@@ -29,14 +38,21 @@
     <p>
         Seba Dominguez | Voz
         <br />
-        "El Tano" Richi | Batería
+        El Tano Richi | Batería
         <br />
         Lucas Vidarte | Bajo
         <br />
         Leo Vidarte | Guitarra
+        <br />
+        <img src="/static/gordon_cooper_en_vivo.png">
     </p>
-    <p><a href="https://soundcloud.com/gordoncooper" title="Escuchanos"><img src="/static/soundcloud.png"></a></p>
-    <p style="color:#fff;font-size:24px">22 de noviembre | <a href="http://www.elsonar.com.ar/lugar/2502/Migue-bar-Aldo-Bonzi">Migue Bar</a>, Aldo Bonzi</p>
-    <p style="color:#fff;font-size:24px">30 de noviembre | <a href="http://culturadelsur.blogspot.com.ar/">Cultura del Sur</a>, Temperley</p>
+    <div><iframe width="500" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/112456222&amp;color=ff6600&amp;auto_play=false&amp;show_artwork=false"></iframe></div>
+    <div><iframe width="500" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/112455677&amp;color=ff6600&amp;auto_play=false&amp;show_artwork=false"></iframe></div>
+    <div><iframe width="500" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/112455070&amp;color=ff6600&amp;auto_play=false&amp;show_artwork=false"></iframe></div>
+
+    <p><a href="https://www.facebook.com/gordoncooper" title="Gordon Cooper en Facebook"><img src="/static/facebook-logo.png" width="64"></a> <a href="https://twitter.com/gordoncooper_" title="Gordon Cooper en Twitter"><img src="/static/twitter-logo.png" width="64"></a></p>
+    <p class="new">20 de diciembre | <a href="https://www.facebook.com/tanque.rock1">Tanque Rock</a>, Monte Grande</p>
+    <p class="old"><del>30 de noviembre | <a href="http://culturadelsur.blogspot.com.ar/">Cultura del Sur</a>, Temperley</del></p>
+    <p class="old"><del>22 de noviembre | <a href="http://www.elsonar.com.ar/lugar/2502/Migue-bar-Aldo-Bonzi">Migue Bar</a>, Aldo Bonzi</del></p>
 </body>
 </html>
