@@ -15,4 +15,4 @@ class Post(models.Model):
     type = models.CharField('type', max_length=12, choices=TYPE_CHOICES)
     title = models.CharField('title', max_length=200)
     body = models.TextField('body')
-    images = models.ManyToManyField(Image)
+    images = models.ManyToManyField(Image, blank=True)
