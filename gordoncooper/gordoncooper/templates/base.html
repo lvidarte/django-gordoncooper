@@ -1,4 +1,4 @@
-<!docmenu html>
+<!doctype html>
 <html>
 <head>
     <meta charset="utf-8">
@@ -17,15 +17,15 @@
         <div id="menu">
             <ul>
                 <li {% if menu == 'home' %}class="active"{% endif %}>
-                    <a href="/">Home</a>
-                </li><li {% if menu == 'download' %}class="active"{% endif %}>
-                    <a href="/downloads">Downloads</a>
+                    <a href="{% url 'home' %}">Home</a>
                 </li><li {% if menu == 'diary' %}class="active"{% endif %}>
-                    <a href="/agenda">Agenda</a>
+                    <a href="{% url 'diary' %}">Agenda</a>
                 </li><li {% if menu == 'gallery' %}class="active"{% endif %}>
-                    <a href="/galeria">Galería</a>
+                    <a href="{% url 'gallery' %}">Galería</a>
+                </li><li {% if menu == 'download' %}class="active"{% endif %}>
+                    <a href="{% url 'downloads' %}">Downloads</a>
                 </li><li {% if menu == 'contact' %}class="active"{% endif %}>
-                    <a href="/contacto">Contacto</a>
+                    <a href="{% url 'contact' %}">Contacto</a>
                 </li>
             </ul>
         </div>
