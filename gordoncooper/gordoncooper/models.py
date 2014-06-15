@@ -22,5 +22,14 @@ class Post(models.Model):
     images = models.ManyToManyField(Image, blank=True)
     active = models.BooleanField('active', default=False)
 
+    @models.permalink
+    def get_absolute_url(self):
+        return ('post-detail', None, {
+            'year': self.publish.year,
+            'month': self.publish.month,
+            'day': self.publish.day,
+            'slug': self.slug
+        })
+
     def __unicode__(self):
         return self.title

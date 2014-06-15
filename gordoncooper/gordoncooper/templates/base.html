@@ -16,15 +16,15 @@
         </div>
         <div id="menu">
             <ul>
-                <li class="active">
+                <li {% if menu == 'Home' %}class="active"{% endif %}>
                     <a href="/">Home</a>
-                </li><li>
+                </li><li {% if menu == 'Downloads' %}class="active"{% endif %}>
                     <a href="/">Downloads</a>
-                </li><li>
+                </li><li {% if menu == 'Agenda' %}class="active"{% endif %}>
                     <a href="/">Agenda</a>
-                </li><li>
+                </li><li {% if menu == 'Galeria' %}class="active"{% endif %}>
                     <a href="/">Galería</a>
-                </li><li>
+                </li><li {% if menu == 'Contacto' %}class="active"{% endif %}>
                     <a href="/">Contacto</a>
                 </li>
             </ul>
