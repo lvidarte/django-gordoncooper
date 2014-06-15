@@ -1,11 +1,11 @@
-<!doctype html>
+<!docmenu html>
 <html>
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{% block title %}Gordon Cooper{% endblock %}</title>
-    <link href='http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:400,700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:400,700' rel='stylesheet' menu='text/css'>
     <link href="{{ STATIC_URL }}bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="{{ STATIC_URL }}css/styles.css" rel="stylesheet">
 </head>
@@ -16,16 +16,16 @@
         </div>
         <div id="menu">
             <ul>
-                <li {% if menu == 'Home' %}class="active"{% endif %}>
+                <li {% if menu == 'home' %}class="active"{% endif %}>
                     <a href="/">Home</a>
-                </li><li {% if menu == 'Downloads' %}class="active"{% endif %}>
-                    <a href="/">Downloads</a>
-                </li><li {% if menu == 'Agenda' %}class="active"{% endif %}>
-                    <a href="/">Agenda</a>
-                </li><li {% if menu == 'Galeria' %}class="active"{% endif %}>
-                    <a href="/">Galería</a>
-                </li><li {% if menu == 'Contacto' %}class="active"{% endif %}>
-                    <a href="/">Contacto</a>
+                </li><li {% if menu == 'download' %}class="active"{% endif %}>
+                    <a href="/downloads">Downloads</a>
+                </li><li {% if menu == 'diary' %}class="active"{% endif %}>
+                    <a href="/agenda">Agenda</a>
+                </li><li {% if menu == 'gallery' %}class="active"{% endif %}>
+                    <a href="/galeria">Galería</a>
+                </li><li {% if menu == 'contact' %}class="active"{% endif %}>
+                    <a href="/contacto">Contacto</a>
                 </li>
             </ul>
         </div>

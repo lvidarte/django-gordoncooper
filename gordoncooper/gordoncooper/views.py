@@ -3,14 +3,20 @@ from django.shortcuts import get_object_or_404
 from gordoncooper.models import Post
 
 
-class HomeView(TemplateView):
+class ListView(TemplateView):
     template_name = "home.html"
 
     def get_context_data(self, **kwargs):
-        context = super(HomeView, self).get_context_data(**kwargs)
+        context = super(ListView, self).get_context_data(**kwargs)
+        type = kwargs['type']
+        context['menu'] = type or 'home'
         context['title'] = 'Home'
-        context['menu'] = 'Home'
-        context['posts'] = Post.objects.filter(active=True).order_by('-publish')[:50]
+
+        posts = Post.objects.filter(active=True).order_by('-publish')
+        if type is None:
+            context['posts'] = posts[:50]
+        else:
+            context['posts'] = posts.filter(type=type)[:50]
         return context
 
 class PostView(TemplateView):
@@ -18,7 +24,6 @@ class PostView(TemplateView):
 
     def get_context_data(self, **kwargs):
         context = super(PostView, self).get_context_data(**kwargs)
-        context['title'] = 'Post'
         context['menu'] = None
         context['post'] = get_object_or_404(
             Post.objects.filter(
