@@ -3,8 +3,9 @@ import datetime
 
 
 TYPE_CHOICES = (
+    ('download', 'Download'),
     ('diary', 'Diary'),
-    ('gallery', 'Gallery')
+    ('gallery', 'Gallery'),
 )
 
 class Image(models.Model):
