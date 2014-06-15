@@ -4,7 +4,7 @@ from gordoncooper.models import Post
 
 
 class ListView(TemplateView):
-    template_name = "home.html"
+    template_name = "list.html"
 
     def get_context_data(self, **kwargs):
         context = super(ListView, self).get_context_data(**kwargs)
