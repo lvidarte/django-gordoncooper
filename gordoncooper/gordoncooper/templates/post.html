@@ -11,7 +11,7 @@
         <img src="/{{ image.image.url }}" width="630px">
         {% endfor %}
     </div>
-    <div class="fb-like" data-href="http://gordoncooper.com.ar{{ post.get_absolute_url }}" data-layout="button" data-action="like" data-show-faces="true" data-share="true"></div>
+    <div class="fb-like" data-layout="button" data-action="like" data-show-faces="true" data-share="true"></div>
     <div class="sep"><span class="glyphicon glyphicon-star"></span></div>
     <div id="fb-root"></div>
     <script>
@@ -23,7 +23,7 @@
           fjs.parentNode.insertBefore(js, fjs);
       }(document, 'script', 'facebook-jssdk'));
     </script>
-    <div class="fb-comments" data-href="http://gordoncooper.com.ar{{ post.get_absolute_url }}" data-numposts="5" data-colorscheme="dark" data-width="630"></div>
+    <div class="fb-comments" data-numposts="5" data-colorscheme="dark" data-width="630"></div>
 
 
 {% endblock %}
